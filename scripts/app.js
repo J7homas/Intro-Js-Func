@@ -29,7 +29,13 @@ Example: isAdult(21) should return 'Adult'.
 Complete the exercise in the space below:
 */
 
-
+function isAdult(number) {
+	if(number < 18){
+		return 'Minor';
+	} else {
+		return 'Adult';
+	}
+}
 
 console.log('Exercise 2 Result:', isAdult(21));
 
@@ -46,7 +52,13 @@ Example: isCharAVowel('a') should return true.
 Complete the exercise in the space below:
 */
 
-
+function isCharAVowel(params) {
+	if (params.charAt(0).localeCompare()) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 console.log('Exercise 3 Result:', isCharAVowel("a"));
 
@@ -62,7 +74,11 @@ should return 'johnsmith@example.com'.
 Complete the exercise in the space below:
 */
 
+function generateEmail(user_name, domain) {
+	let email = user_name.concat("@") + domain;
 
+	return email;
+}
 
 console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
 
@@ -78,14 +94,16 @@ Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
 Complete the exercise in the space below:
 */
 
-
+function greetUser(user_name, timeOfDay) {
+	return `Good ${timeOfDay}, ${user_name}!`;
+}
 
 console.log('Exercise 5 Result:', greetUser("Sam", "morning"));
 
 /*
 Exercise 6: maxOfThree()
 
-Define a function, maxOfThree. It should accept three numbers 
+define a function, maxOfThree. It should accept three numbers 
 and return the largest among them.
 
 Example: maxOfThree(17, 4, 9) should return 17.
@@ -93,7 +111,15 @@ Example: maxOfThree(17, 4, 9) should return 17.
 Complete the exercise in the space below:
 */
 
-
+function maxOfThree(a, b, c) {
+  if (a >= b && a >= c) {
+    return a;
+  } else if (b >= a && b >= c) {
+    return b;
+  } else {
+    return c;
+  }
+}
 
 console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
 
@@ -109,7 +135,9 @@ Example: calculateTip(50, 20) should return 10.
 Complete the exercise in the space below:
 */
 
-
+function calculateTip(bill, tipPercent) {
+  return bill * (tipPercent / 100);
+}
 
 console.log('Exercise 7 Result:', calculateTip(50, 20));
 
@@ -117,7 +145,7 @@ console.log('Exercise 7 Result:', calculateTip(50, 20));
 Exercise 8: convertTemperature()
 
 Write a function named convertTemperature. 
-It takes two arguments: a temperature and a string representing the 
+takes two arguments: a temperature and a string representing the 
 scale ('C' for Celsius, 'F' for Fahrenheit). 
 Convert the temperature to the other scale.
 
@@ -127,7 +155,17 @@ Example: convertTemperature(32, 'F') should return 0 (Celsius).
 Complete the exercise in the space below:
 */
 
-
+function convertTemperature(temp, scale) {
+  if (scale === "C") {
+    // Celsius → Fahrenheit
+    return temp * 9/5 + 32;
+  } else if (scale === "F") {
+    // Fahrenheit → Celsius
+    return (temp - 32) * 5/9;
+  } else {
+    return "Invalid scale";
+  }
+}
 
 console.log('Exercise 8 Result:', convertTemperature(32, "C"));
 
@@ -147,7 +185,19 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 Complete the exercise in the space below:
 */
 
-
+function basicCalculator(num1, num2, operation) {
+  if (operation === "add") {
+    return num1 + num2;
+  } else if (operation === "subtract") {
+    return num1 - num2;
+  } else if (operation === "multiply") {
+    return num1 * num2;
+  } else if (operation === "divide") {
+    return num1 / num2;
+  } else {
+    return "Invalid operation";
+  }
+}
 
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
 
