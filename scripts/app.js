@@ -78,7 +78,7 @@ Complete the exercise in the space below:
 */
 
 function generateEmail(user_name, domain) {
-	let email = user_name.concat("@") + domain;
+	let email = user_name + "@" + domain;
 
 	return email;
 }
