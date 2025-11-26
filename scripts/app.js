@@ -52,15 +52,18 @@ Example: isCharAVowel('a') should return true.
 Complete the exercise in the space below:
 */
 
-function isCharAVowel(params) {
-	if (params.charAt(0).localeCompare()) {
-		return true;
+function isCharAVowel() {
+	let vowel_array = ['a', 'e', 'i', 'o', 'u'];
+	let msg = window.prompt("Enter a charater: (eg: one letter.)");
+
+	if (vowel_array.includes(msg)) {
+		console.log(`${msg}, is a vowel.`)
 	} else {
-		return false;
+		console.log(`${msg}, is not a vowel.`)
 	}
 }
 
-console.log('Exercise 3 Result:', isCharAVowel("a"));
+console.log('Exercise 3 Result:', isCharAVowel());
 
 /*
 Exercise 4: generateEmail()
